@@ -2,7 +2,27 @@
 
 > Seed templates for generating [boilerplate-nglib](https://github.com/cork-labs/boilerplate-nglib) with [generator-nglib](https://github.com/cork-labs/generator-nglib).
 
-Nothing to see here, just follow the links above.
+## How To
+
+```
+npm install -g yo generator-nglib
+mkdir cx.foobar
+cd cx.foobar
+yo nglib --config https://raw.githubusercontent.com/ef-ctx/generator-nglib-seeds/master/boilerplate-nglib/.yo-rc.json --tpl git@github.com:ef-ctx/generator-nglib-seeds.git --tpl-path boilerplate-nglib/templates --tpl-branch v0.0.1
+```
+
+To generate from a local seed and/or local template:
+
+```
+yo nglib --config ~/.yo-rc.json --tpl ~/boilerplate-nglib/templates/
+```
+
+To skip existing cache of the template repo (if you are not using proper tags, of course) add `--tpl-refresh`.
+
+Further documentation can be found at:
+- [boilerplate-nglib](https://github.com/cork-labs/boilerplate-nglib)
+- [generator-nglib](https://github.com/cork-labs/generator-nglib)
+
 
 ## [MIT License](LICENSE-MIT)
 

@@ -2,6 +2,6 @@
 @name Demo
 @description
 
-# Demos
+# <%= config['project.name'] %> Demo
 
 Pick a demo from the menu on the left.

@@ -7,6 +7,8 @@
     "angular.module": "my.module",
     "has.tpl": true,
     "has.css": true,
+    "has.less": true,
+    "has.sass": true,
     "has.docs": true,
     "use.git": true,
     "github.username": "cork-labs",
