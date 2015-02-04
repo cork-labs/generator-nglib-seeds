@@ -4,17 +4,19 @@
 
 ## How To
 
+The following will generate a AngularJS library project using Cork Labs defaults.
+
 ```
 npm install -g yo generator-nglib
 mkdir cx.foobar
 cd cx.foobar
-yo nglib --config https://raw.githubusercontent.com/ef-ctx/generator-nglib-seeds/master/boilerplate-nglib/.yo-rc.json --tpl git@github.com:ef-ctx/generator-nglib-seeds.git --tpl-path boilerplate-nglib/templates --tpl-branch v0.0.1
+yo nglib --config https://raw.githubusercontent.com/ef-ctx/generator-nglib-seeds/master/cork-labs-nglib/.yo-rc.json --tpl git@github.com:ef-ctx/generator-nglib-seeds.git --tpl-path cork-labs-nglib/templates --tpl-branch v0.0.1
 ```
 
 To generate from a local seed and/or local template:
 
 ```
-yo nglib --config ~/.yo-rc.json --tpl ~/boilerplate-nglib/templates/
+yo nglib --config ~/.yo-rc.json --tpl ~/templates/
 ```
 
 To skip existing cache of the template repo (if you are not using proper tags, of course) add `--tpl-refresh`.
