@@ -5,7 +5,7 @@
 # <%= config['project.name'] %>
 
 <% if (config['use.travis']) { %>[![Build Status: Linux](http://img.shields.io/travis/<%= config['travis.id'] %>/master.svg?style=flat-square)](https://travis-ci.org/<%= config['travis.id'] %>)
-<% } %>[![Bower version](http://img.shields.io/bower/v/<%= config['bower.id'] %>.svg?style=flat-square)](<%= config['repo.url'] %>)
+<% } %>
 
 > <%= config['project.description'] %>
 
@@ -39,8 +39,9 @@ $ ./bootstrap.sh
 $ grunt develop
 ```
 
-At this point, the source examples included were built into the `build/` directory and a simple webserver is launched so
-that you can browse the documentation, the examples and the code coverage.
+At this point, the source was validated, tested and built into the `build/` directory. A simple webserver is launched so
+that you can browse the generated code, documentation and the code coverage. If you now edit and save any project file,
+the necessary `grunt` tasks will be triggered to update the build and docs.
 
 ```
 ...
@@ -52,3 +53,32 @@ Waiting...
 ```
 
 If you point your browser to `http://0.0.0.0:8000/docs` you should be looking at this exact documentation.
+
+
+## Contributing
+
+We'd love for you to contribute to our source code and to make it even better than it is today!
+
+Make sure you read the [Contributing Guide](https://github.com/cork-labs/boilerplate-nglib/blob/master/CONTRIBUTING.md) first.
+
+
+## MIT License
+
+[Copyright (c) 2005 <%= config['author.name'] %>](<%= config['license.url'] %>)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
