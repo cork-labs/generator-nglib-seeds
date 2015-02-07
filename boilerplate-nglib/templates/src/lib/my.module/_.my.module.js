@@ -9,7 +9,7 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
  */
 .provider('myService', [
 
-    function () {
+    function myServiceProvider() {
         'use strict';
 
         var baseUrl;
@@ -17,7 +17,7 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
         /**
          * @type {Object} provider configuration.
          */
-        var myConfig = {
+        var serviceConfig = {
             divisor: 2
         };
 
@@ -33,7 +33,7 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
          * - divisor {number}
          */
         this.configure = function (config) {
-            angular.extend(myConfig, config);
+            angular.extend(serviceConfig, config);
         };
 
         /**
@@ -48,14 +48,14 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
          */
         this.$get = [
             '$q',
-            function ($q) {
+            function myService($q) {
 
                 /**
                  * @var {boolean} rounding
                  */
                 var rounding = false;
 
-                var myService = {
+                var serviceApi = {
 
                     /**
                      * @ngdoc function
@@ -69,18 +69,18 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
                      * @returns {number} The divided number.
                      */
                     divide: function (value) {
-                        var result = value / myConfig.divisor;
+                        var result = value / serviceConfig.divisor;
                         return rounding ? Math.round(result) : result;
                     }
                 };
 
-                Object.defineProperty(myService, 'divisor', {
+                Object.defineProperty(serviceApi, 'divisor', {
                     get: function () {
-                        return myConfig.divisor;
+                        return serviceConfig.divisor;
                     }
                 });
 
-                Object.defineProperty(myService, 'rounding', {
+                Object.defineProperty(serviceApi, 'rounding', {
                     get: function () {
                         return rounding;
                     },
@@ -89,7 +89,7 @@ angular.module('<%= config['angular.module'] %>', ['<%= config['angular.module']
                     }
                 });
 
-                return myService;
+                return serviceApi;
             }
         ];
     }

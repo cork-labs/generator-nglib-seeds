@@ -1,0 +1,16 @@
+@ngdoc overview
+@name API Reference
+@description
+
+# <%= config['project.name'] %> - API Reference
+
+> Welcome to the **<%= config['project.name'] %>** API reference.
+
+If you want to know how **<%= config['project.name'] %>** works, checkout the {@link guide/ guide} and the {@link demos/ demos}
+
+
+## Modules
+
+- [<%= config['angular.module'] %>](#/api/<%= config['angular.module'] %>) - Provides a configurable service that divides numbers by X, as well as a directive and a filter.
+
+

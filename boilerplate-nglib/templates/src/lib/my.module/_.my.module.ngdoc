@@ -2,23 +2,51 @@
 @name <%= config['angular.module'] %>
 @description
 
-Provides a configurable service that divides numbers by X, as well as a directive and a filter.
+> Provides a configurable service that divides numbers by X, as well as a directive and a filter.
 
-Configure this awesome {@link <%= config['angular.module'] %>.myService service} by invoking `configure()` on the {@link <%= config['angular.module'] %>.myServiceProvider provider}
+# Dependencies
+
+- None.
+
+
+# Usage
+
+
+## Configuration
+
+Configure the {@link <%= config['angular.module'] %>.myService myService} service by invoking `configure()` on the {@link <%= config['angular.module'] %>.myServiceProvider myServiceProvider}.
 during the config phase of your app.
 
 <pre>
-angular.module('app', ['my-module'])
+angular.module('app', ['<%= config['angular.module'] %>'])
 .config(['myServiceProvider', function (myServiceProvider) {
     myServiceProvider.configure(....);
 }])
 </pre>
+
+
+## Service
+
+Use the {@link <%= config['angular.module'] %>.myService myService} service by injecting it into your controllers or services.
+
+<pre>
+angular.module('app', ['<%= config['angular.module'] %>'])
+.service(['yourService', function (myService) {
+    var myNumber = myService.divide(42);
+}])
+</pre>
+
+
+## Directive
 
 You can also use the awesome {@link <%= config['angular.module'] %>.directive:myDivision directive}.
 
 <pre>
 <div my-division="number"></div>
 </pre>
+
+
+## Filter
 
 This module also provides an awesome {@link <%= config['angular.module'] %>.filter:myDivide filter}.
 
