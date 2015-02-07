@@ -39,7 +39,7 @@ angular.module('app', ['<%= config['angular.module'] %>'])
 
 ## Directive
 
-You can also use the awesome {@link <%= config['angular.module'] %>.directive:myDivision directive}.
+You can also use the {@link <%= config['angular.module'] %>.directive:myDivision myDivision} directive.
 
 <pre>
 <div my-division="number"></div>
@@ -48,7 +48,7 @@ You can also use the awesome {@link <%= config['angular.module'] %>.directive:my
 
 ## Filter
 
-This module also provides an awesome {@link <%= config['angular.module'] %>.filter:myDivide filter}.
+This module also provides the {@link <%= config['angular.module'] %>.filter:myDivide myDivide} filter.
 
 <pre>
 <div>{{number | my-divide</div>
